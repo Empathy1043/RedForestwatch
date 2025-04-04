@@ -7624,12 +7624,12 @@ html:not(.lt-ie10) .not-animated {
   background: linear-gradient(45deg, #2a9d8f, #8AB17D) !important;
 }
 
-/* 移动端菜单按钮颜色 */
+/* 移动端菜单按钮颜色
 .rd-navbar-toggle span,
 .rd-navbar-toggle span::before,
 .rd-navbar-toggle span::after {
-  background: #fff !important;
-}
+  background: #000 !important;
+} */
 
 /* 下拉菜单背景色
 .rd-navbar-dropdown {
@@ -7637,7 +7637,7 @@ html:not(.lt-ie10) .not-animated {
   border: 1px solid rgba(255,255,255,0.1);
 } */
 
-/* 二级菜单项悬停效果 */
+/* 二级菜单项悬停效果
 .rd-navbar-dropdown .rd-dropdown-link:hover {
   background: rgba(255,255,255,0.1);
 }
@@ -7653,7 +7653,7 @@ html:not(.lt-ie10) .not-animated {
 	border: none;
 	cursor: pointer;
 	display: none;
-}
+} */
 
 .rd-navbar-toggle span {
 	position: relative;
