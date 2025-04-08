@@ -36,7 +36,14 @@ label {
 p {
 	margin: 0;
 }
+/* 在style.css中添加 */
+.accordion-button:not([disabled]) {
+  pointer-events: auto !important;
+}
 
+.collapse:not(.show) {
+  display: none !important;
+}
 ul,
 ol {
 	list-style: none;
@@ -253,7 +260,7 @@ code,
 * ==================================================
 */
 .page .text-primary {
-	color: #EB9B5F !important;
+	color: #2A9D8F !important;
 }
 
 .page .text-dark {
@@ -4556,7 +4563,8 @@ h3 + .card-custom-group-wrap {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
-  margin: 4rem 0;
+  /* margin: 4rem 0; */
+	margin: 4rem 0 1rem 0;
 }
 
 #overview .stat-card {
@@ -4829,6 +4837,9 @@ h3 + .card-custom-group-wrap {
 #overview .stat-card:nth-child(2) .stat-number { color: #e9c46a; }
 #overview .stat-card:nth-child(3) .stat-number { color: #264653; }
 #overview .stat-card:nth-child(4) .stat-number { color: #eb9b5f; }
+#overview .stat-card:nth-child(4) .stat-number { color: #68eb5f; }
+#overview .stat-card:nth-child(4) .stat-number { color: #1c849c; }
+#overview .stat-card:nth-child(4) .stat-number { color: #e59296; }
 .modal-dialog_custom button.close:hover {
 	color: #EB9B5F;
 }
@@ -5303,9 +5314,23 @@ h3 + .card-custom-group-wrap {
 }
 
 .bg-secondary {
-	background-color: #2A6041 !important;
+	/* background-color: #2A6041 !important; */
+	background: url('../images/002.png') center/cover;
+	/* background-color: #0A1630 !important; */
+	
 }
-
+.bg-secondary::before{
+	content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/mangrove-pattern.svg') repeat;
+  opacity: 0.15;
+  pointer-events: none;
+	
+}
 .bg-secondary:not([style*="background-"]) + .bg-secondary:not([style*="background-"]) {
 	padding-top: 0;
 }
@@ -5695,7 +5720,60 @@ html .page .group-bottom > *, html .page .group-bottom > *:first-child {
 		padding-bottom: 90px;
 	}
 }
+/* 现代玻璃拟态效果 */
+.glass-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(42, 157, 143, 0.3);
+}
 
+/* 数据可视化卡片 */
+.data-card h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 科技感时间线 */
+.eco-timeline {
+  position: relative;
+  padding-left: 24px;
+}
+.timeline-item {
+  position: relative;
+  padding: 12px 0;
+  border-left: 2px solid #2A9D8F;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 18px;
+  width: 16px;
+  height: 16px;
+  background: #2A6041;
+  border: 2px solid #2A9D8F;
+  border-radius: 50%;
+}
+.timeline-year {
+  color: #2A9D8F;
+  font-weight: 700;
+}
+
+/* 技术网格 */
+.tech-card {
+  background: linear-gradient(145deg, #2A6041 0%, #1D4733 100%);
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+.icon-lab, .icon-chip {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 @media (min-width: 992px) {
 	.section-md {
 		padding-top: 90px;
@@ -5954,18 +6032,44 @@ h6 + p,
 .icon-xxl + .heading-3 {
 	margin-top: 35px;
 }
-
+.p2{text-indent: 2em;}
 .range + .range {
 	margin-top: 40px;
 }
-
 h1 + h3,
 .heading-1 + h3,
 h1 + .heading-3,
 .heading-1 + .heading-3 {
 	margin-top: 20px;
 }
+/* 添加过渡动画 */
+.accordion-collapse {
+  transition: all 0.35s ease;
+}
 
+/* 修复可能被覆盖的样式 */
+.accordion-button::after {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+.accordion-collapse {
+	transition: height 0.35s ease !important;
+}
+.accordion-button:not(.collapsed) {
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
+	background-color: #f8f9fa;
+}
+.accordion-button::after {
+	transition: transform 0.3s ease-in-out;
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(-180deg);
+}
+.accordion-button:focus {
+	box-shadow: none;
+}
+.accordion-body {
+	background-color: rgba(248,249,250,0.5);
+}
 h2 + h5,
 .heading-2 + h5,
 h2 + .heading-5,
@@ -12826,10 +12930,10 @@ html:not(.ie-11):not(.ie-10) .countdown-circle {
 .calendar-box-list-view li > a:hover {
 	color: #EB9B5F;
 }
-
+/* 
 .calendar-box-list-view.collapse {
 	display: block !important;
-}
+} */
 
 .calendar-box-list-view.collapse.show {
 	height: auto;

@@ -73,7 +73,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 	font-family: "Volkhov", "Times New Roman", Times, serif;
 	font-weight: 700;
 	line-height: 1.1;
-	color: #333333;
+	color: #fffcfc;
 }
 
 h1, .h1 {
@@ -2807,8 +2807,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
 	color: #fff;
-	background-color: #0d6efd;
-	border-color: #0d6efd;
+	background-color: #2A9D8F;
+	border-color: #2A9D8F;
 }
 
 .btn-primary:hover {
@@ -6563,9 +6563,9 @@ fieldset:disabled .btn {
 	display: none !important;
 }
 
-.shadow {
+/* .shadow {
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
+} */
 
 .shadow-sm {
 	box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
@@ -7585,7 +7585,7 @@ fieldset:disabled .btn {
 }
 
 .bg-primary {
-	background-color: #0d6efd !important;
+	background-color: #2A9D8F !important;
 }
 
 .bg-secondary {
