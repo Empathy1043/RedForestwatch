@@ -584,8 +584,8 @@ span.button {
 
 .page .button-primary {
 	color: #fff;
-	background-color: #EB9B5F;
-	border-color: #EB9B5F;
+	background-color: #2A9D8F;
+	/* border-color: #EB9B5F; */
 }
 
 .page .button-primary:hover, .page .button-primary:focus, .page .button-primary:active, .page .button-primary:hover {
@@ -1830,7 +1830,7 @@ textarea.form-input {
 .list-nav {
 	position: relative;
 	transform: translate3d(0, -10px, 0);
-	margin-bottom: -10px;
+	/* margin-bottom: -10px; */
 	margin-left: -15px;
 	margin-right: -15px;
 }
@@ -7725,7 +7725,8 @@ html:not(.lt-ie10) .not-animated {
 }
 /* 修改导航栏背景色 */
 .rd-navbar {
-  background: linear-gradient(45deg, #2a9d8f, #8AB17D) !important;
+  /* background: linear-gradient(45deg, #2a9d8f, #8AB17D) !important; */
+	background: #fff !important;
 }
 
 /* 移动端菜单按钮颜色
@@ -8969,7 +8970,7 @@ html:not(.lt-ie10) .not-animated {
 */
 .rd-navbar-static {
 	display: block;
-	padding: 0 15px;
+	padding: 0 0px;
 	background-color: #566C56;
 }
 
@@ -8978,7 +8979,7 @@ html:not(.lt-ie10) .not-animated {
 	flex-direction: row;
 	transition: all 0.3s ease-in-out;
 	max-width: 1270px;
-	margin-left: auto;
+	/* margin-left: auto; */
 	margin-right: auto;
 }
 
@@ -9034,6 +9035,7 @@ html:not(.lt-ie10) .not-animated {
 
 .rd-navbar-static .rd-navbar-brand .brand-logo-light {
 	display: block;
+	width: 20%;
 }
 
 .rd-navbar-static .rd-navbar-nav {
@@ -9043,7 +9045,7 @@ html:not(.lt-ie10) .not-animated {
 
 .rd-navbar-static .rd-nav-item .rd-navbar-submenu-toggle,
 .rd-navbar-static .rd-nav-item .rd-nav-link {
-	color: #fff;
+	color: #000;
 }
 
 .rd-navbar-static .rd-nav-item .rd-nav-link {
@@ -9084,7 +9086,7 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .rd-navbar-static .rd-nav-link:hover {
-	color: #fff;
+	color: #e1711c;
 }
 
 .rd-navbar-static .rd-nav-link:hover::before {
