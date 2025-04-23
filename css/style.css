@@ -7726,7 +7726,8 @@ html:not(.lt-ie10) .not-animated {
 /* 修改导航栏背景色 */
 .rd-navbar {
   /* background: linear-gradient(45deg, #2a9d8f, #8AB17D) !important; */
-	background: #fff !important;
+	background: linear-gradient(45deg, #e4f9e2, #e0f2f1) !important;
+	/* background: #fff !important; */
 }
 
 /* 移动端菜单按钮颜色
