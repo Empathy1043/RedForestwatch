@@ -108,12 +108,14 @@
         <div class="container">
           <h3>生态科普</h3>
           <div class="isotope-wrap row row-70">
-            <div class="col-sm-12">
-              <ul class="list-nav isotope-filters isotope-filters-horizontal">
-                <li><a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">All</a></li>
-                <li><a data-isotope-filter="Category 1" data-isotope-group="gallery" href="#">Advantages</a></li>
-                <li><a data-isotope-filter="Category 2" data-isotope-group="gallery" href="#">Services</a></li>
-              </ul>
+             <!-- 导航过滤 -->
+      <nav class="filter-nav">
+        <ul class="nav justify-content-center">
+          <li class="nav-item"><a class="nav-link active" href="#">全部</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">生态价值</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">保护服务</a></li>
+        </ul>
+      </nav>
               <!-- <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank">
                 <img 
                     src="images/gzh1.png" 
@@ -129,61 +131,97 @@
               >
           </a> -->
           <!-- 文章卡片示例 -->
-<div class="article-card row">
-  <div style="width: 50%;">
-      <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank">
-        <img 
-            src="images/gzh1.png" 
-            alt="示例图片"
-            style="width: 500px; height: auto; cursor: pointer;"
-        >
-    </a>
-      <div class="card-content">
-        <h3>金牛岛红林翠海：解码生态密码</h3>
-        <p>红树林间鹭鸟飞，船游绿海不思归</p>
-        <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank" class="read-btn">
-          阅读完整文章 →
-        </a>
-      </div>
-  </div>
-    <div style="width: 50%;">
-      <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank">
-        <img 
-            src="images/gzh2.png" 
-            alt="示例图片"
-            style="width: 500px; height: 429.46px; cursor: pointer;"
-        >
-      </a>
-      <div class="card-content">
-        <h3>红树林不红？</h3>
-        <p>揭秘植物界最“名不符实”的种群</p>
-        <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank" class="read-btn">
-          阅读完整文章 →
-        </a>
-      </div>
-    </div>
-  
-</div>
-<!-- <div class="article-card">
-  <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank">
-    <img 
-        src="images/gzh2.png" 
-        alt="示例图片"
-        style="width: 500px; height: 429.46px; cursor: pointer;"
-    >
-</a>
-  <div class="card-content">
-    <h3>北极熊生存现状研究报告</h3>
-    <p>全球变暖导致海冰面积持续减少...</p>
-    <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank" class="read-btn">
-      阅读完整文章 →
-    </a>
-  </div>
-</div> -->
+          <!-- 双栏内容布局 -->
+          <div class="row eco-articles gy-5">
+            <!-- 左栏文章卡片 -->
+            <article class="col-lg-6 eco-card">
+              <div class="card-hover">
+                <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank" class="card-media">
+                  <img src="images/gzh1.png" alt="航拍金牛岛红树林景观" class="eco-image">
+                </a>
+                <div class="card-body">
+                  <span class="badge bg-soft-green">湿地生态</span>
+                  <h4 class="card-title">金牛岛红林翠海：解码生态密码</h4>
+                  <blockquote class="card-quote">红树林间鹭鸟飞，船游绿海不思归</blockquote>
+                  <a href="#" class="btn btn-eco">
+                    阅读完整文章
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- 右栏文章卡片 -->
+            <article class="col-lg-6 eco-card">
+              <div class="card-hover">
+                <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank" class="card-media">
+                  <img src="images/gzh2.png" alt="红树林生态讲解场景" class="eco-image">
+                </a>
+                <div class="card-body">
+                  <span class="badge bg-soft-yellow">植物百科</span>
+                  <h4 class="card-title">红树林不红？名称背后的秘密</h4>
+                  <blockquote class="card-quote">揭秘植物界最"名不副实"的种群</blockquote>
+                  <a href="#" class="btn btn-eco">
+                    阅读完整文章
+                    <i class="icon-arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
 
 
 
 <style>
+  /* 生态主题色 */
+:root {
+  --eco-green: #2ecc71;
+  --eco-dark: #27ae60;
+}
+
+/* 卡片交互优化 */
+.eco-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(46, 204, 113, 0.1);
+}
+
+/* 图片自适应 */
+.eco-image {
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* 生态按钮 */
+.btn-eco {
+  background: var(--eco-green);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.btn-eco:hover {
+  background: var(--eco-dark);
+}
+
+/* 引用文字样式 */
+.card-quote {
+  color: #7f8c8d;
+  font-style: italic;
+  border-left: 3px solid var(--eco-green);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+  .eco-image { height: 280px; }
+  .card-title { font-size: 1.4rem; }
+}
 /* 卡片悬停动效 */
 .article-card {
   transition: transform 0.3s ease;
@@ -202,6 +240,9 @@
 }
 .read-btn:hover {
   background: #219a52;
+}
+.card-content {
+  width: auto;
 }
 </style>
               <!-- <div class="isotope row" data-isotope-layout="fitRows" data-isotope-group="gallery">
