@@ -583,8 +583,8 @@ span.button {
 }
 
 .page .button-primary {
-	color: #fff;
-	background-color: #2A9D8F;
+	color:rgb(84 101 99);
+	background: linear-gradient(45deg, #E4BA91, #F0E0CD);
 	/* border-color: #EB9B5F; */
 }
 
@@ -7726,7 +7726,7 @@ html:not(.lt-ie10) .not-animated {
 /* 修改导航栏背景色 */
 .rd-navbar {
   /* background: linear-gradient(45deg, #2a9d8f, #8AB17D) !important; */
-	background: linear-gradient(45deg, #e4f9e2, #e0f2f1) !important;
+	background: linear-gradient(45deg, rgba(55,84,78,0.8), rgba(42,62,60,0.8)) !important;
 	/* background: #fff !important; */
 }
 
@@ -9036,7 +9036,7 @@ html:not(.lt-ie10) .not-animated {
 
 .rd-navbar-static .rd-navbar-brand .brand-logo-light {
 	display: block;
-	width: 20%;
+	width: 30%;
 }
 
 .rd-navbar-static .rd-navbar-nav {
@@ -9046,11 +9046,11 @@ html:not(.lt-ie10) .not-animated {
 
 .rd-navbar-static .rd-nav-item .rd-navbar-submenu-toggle,
 .rd-navbar-static .rd-nav-item .rd-nav-link {
-	color: #000;
+	color: #ffffff;
 }
 
 .rd-navbar-static .rd-nav-item .rd-nav-link {
-	font-size: 18px;
+	font-size: 24px;
 	text-transform: none;
 	letter-spacing: 0;
 }
@@ -9082,7 +9082,7 @@ html:not(.lt-ie10) .not-animated {
 	transform: translateX(-50%);
 	width: 0;
 	height: 8px;
-	background-color: #EB9B5F;
+	background:linear-gradient(45deg, #E4BA91, #F0E0CD);
 	transition: all 0.3s ease-in-out;
 }
 
