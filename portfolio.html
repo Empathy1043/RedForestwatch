@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/生态科普.css"></link>
     <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
 
   </head>
@@ -90,248 +91,131 @@
           </nav>
         </div>
       </header>
-
-      <!-- Breadcrumbs
-      <section class="section novi-bg novi-bg-img breadcrumbs-custom">
-        <div class="container">
-          <div class="breadcrumbs-custom__inner">
-            <p class="breadcrumbs-custom__title">Portfolio</p>
-            <ul class="breadcrumbs-custom__path">
-              <li><a href="index.html">Home</a></li>
-              <li class="active">Portfolio</li>
-            </ul>
+      <section class="video-section">
+        <div class="video-container" data-aos="zoom-in">
+          <video class="eco-video" 
+                 poster="images/video-poster.jpg" 
+                 autoplay muted playsinline controls>
+            <source src="audio/WeChat_20250424213535.mp4" type="video/mp4">
+            <track label="中文字幕" kind="subtitles" srclang="zh" src="media/subtitles.vtt">
+          </video>
+          <div class="video-overlay">
+            <button class="btn-sound" aria-label="开启声音">
+              <i class="ph ph-speaker-simple-slash"></i>
+            </button>
           </div>
         </div>
-      </section> -->
-
+      </section>
       <section class="section novi-bg novi-bg-img section-lg bg-default text-center">
-        <div class="container">
-          <h3>生态科普</h3>
-          <div class="isotope-wrap row row-70">
-             <!-- 导航过滤 -->
-      <nav class="filter-nav">
-        <ul class="nav justify-content-center">
-          <li class="nav-item"><a class="nav-link active" href="#">全部</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">生态价值</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">保护服务</a></li>
-        </ul>
-      </nav>
-              <!-- <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank">
-                <img 
-                    src="images/gzh1.png" 
-                    alt="示例图片"
-                    style="width: 500px; height: auto; cursor: pointer;"
-                >
-            </a>
-            <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank">
-              <img 
-                  src="images/gzh2.png" 
-                  alt="示例图片"
-                  style="width: 500px; height: 429.46px; cursor: pointer;"
-              >
-          </a> -->
-          <!-- 文章卡片示例 -->
-          <!-- 双栏内容布局 -->
+        <div class="eco-container">
+          <div class="leaf-pattern-overlay"></div>
+          
+          <!-- 导航栏增加生态图标 -->
+          <nav class="filter-nav">
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="icon-leaf"></i> 全部
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="icon-leaf"></i> 生态价值
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="icon-leaf"></i> 保护服务
+                </a>
+              </li>
+              <!-- 其他导航项同理添加图标 -->
+            </ul>
+          </nav>
+        
+          <!-- 卡片容器增加多维度信息展示 -->
           <div class="row eco-articles gy-5">
-            <!-- 左栏文章卡片 -->
             <article class="col-lg-6 eco-card">
               <div class="card-hover">
+                <!-- 新增图片信息层 -->
                 <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank" class="card-media">
                   <img src="images/gzh1.png" alt="航拍金牛岛红树林景观" class="eco-image">
                 </a>
+                
+                <!-- 卡片正文增加多信息模块 -->
                 <div class="card-body">
-                  <span class="badge bg-soft-green">湿地生态</span>
-                  <h4 class="card-title">金牛岛红林翠海：解码生态密码</h4>
-                  <blockquote class="card-quote">红树林间鹭鸟飞，船游绿海不思归</blockquote>
-                  <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" class="btn btn-eco">
-                    阅读完整文章
-                    <i class="icon-arrow-right"></i>
-                  </a>
+                  <span class="badge bg-soft-green", style="color: #c8e6c9;">湿地生态</span>
+                          <h4 class="card-title">金牛岛红林翠海：解码生态密码</h4>
+                          <blockquote class="card-quote">红树林间鹭鸟飞，船游绿海不思归</blockquote>
+                          <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" class="btn btn-eco">
+                            阅读完整文章
+                            <i class="icon-arrow-right"></i>
+                          </a>
+                  <div class="article-meta">  <!-- 新增元信息 -->
+                    <span class="author">👩🔬 红林守望</span>
+                    <span class="date">🕒 2025年04月07日09:26</span>
+                  </div>
+                  <h4 class="card-title">...</h4>
+                  <!-- 新增数据可视化 -->
+                  <div class="eco-stats">
+                    <div class="stat-item">
+                      <div class="stat-bar" style="width: 63%"></div>
+                      <span>生态完整度 63%</span>
+                    </div>
+                  </div>
+                  <blockquote class="card-quote">...</blockquote>
+                  <!-- 新增互动元素 -->
+                  <div class="card-actions">
+                    <button class="btn btn-icon">
+                      <i class="icon-share"></i> 234📖
+                    </button>
+                    <button class="btn btn-icon">
+                      <i class="icon-heart"></i> 1.8k👍️
+                    </button>
+                  </div>
                 </div>
               </div>
             </article>
-
-            <!-- 右栏文章卡片 -->
             <article class="col-lg-6 eco-card">
               <div class="card-hover">
+                <!-- 新增图片信息层 -->
                 <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank" class="card-media">
-                  <img src="images/gzh2.png" alt="红树林生态讲解场景" class="eco-image">
+                  <img src="images/gzh2.png" alt="航拍金牛岛红树林景观" class="eco-image">
                 </a>
+                
+                <!-- 卡片正文增加多信息模块 -->
                 <div class="card-body">
-                  <span class="badge bg-soft-yellow">植物百科</span>
-                  <h4 class="card-title">红树林不红？名称背后的秘密</h4>
-                  <blockquote class="card-quote">揭秘植物界最"名不副实"的种群</blockquote>
-                  <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" class="btn btn-eco">
-                    阅读完整文章
-                    <i class="icon-arrow-right"></i>
-                  </a>
+                  <span class="badge bg-soft-green", style="color: #c8e6c9;">植物百科</span>
+                          <h4 class="card-title">红树林不红？名称背后的秘密</h4>
+                          <blockquote class="card-quote">揭秘植物界最"名不副实"的种群</blockquote>
+                          <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" class="btn btn-eco">
+                            阅读完整文章
+                            <i class="icon-arrow-right"></i>
+                          </a>
+                  <div class="article-meta">  <!-- 新增元信息 -->
+                    <span class="author">👩🔬 红林守望</span>
+                    <span class="date">🕒 2025年04月20日11:40</span>
+                  </div>
+                  <h4 class="card-title">...</h4>
+                  <!-- 新增数据可视化 -->
+                  <div class="eco-stats">
+                    <div class="stat-item">
+                      <div class="stat-bar" style="width: 85%"></div>
+                      <span>生态完整度 85%</span>
+                    </div>
+                  </div>
+                  <blockquote class="card-quote">...</blockquote>
+                  <!-- 新增互动元素 -->
+                  <div class="card-actions">
+                    <button class="btn btn-icon">
+                      <i class="icon-share"></i> 168📖
+                    </button>
+                    <button class="btn btn-icon">
+                      <i class="icon-heart"></i> 1.2k👍️
+                    </button>
+                  </div>
                 </div>
               </div>
             </article>
-          </div>
-
-
-
-<style>
-  /* 生态主题色 */
-:root {
-  --eco-green: #2ecc71;
-  --eco-dark: #27ae60;
-}
-
-/* 卡片交互优化 */
-.eco-card {
-  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-.card-hover:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(46, 204, 113, 0.1);
-}
-
-/* 图片自适应 */
-.eco-image {
-  height: 320px;
-  object-fit: cover;
-  border-radius: 8px 8px 0 0;
-}
-
-/* 生态按钮 */
-.btn-eco {
-  background: var(--eco-green);
-  color: white;
-  padding: 0.8rem 2rem;
-  border-radius: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.btn-eco:hover {
-  background: var(--eco-dark);
-}
-
-/* 引用文字样式 */
-.card-quote {
-  color: #7f8c8d;
-  font-style: italic;
-  border-left: 3px solid var(--eco-green);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
-}
-
-/* 响应式调整 */
-@media (max-width: 992px) {
-  .eco-image { height: 280px; }
-  .card-title { font-size: 1.4rem; }
-}
-/* 卡片悬停动效 */
-.article-card {
-  transition: transform 0.3s ease;
-}
-.article-card:hover {
-  transform: translateY(-5px);
-}
-
-/* 阅读按钮样式 */
-.read-btn {
-  background: #27ae60;
-  padding: 8px 20px;
-  border-radius: 20px;
-  color: white;
-  display: inline-block;
-}
-.read-btn:hover {
-  background: #219a52;
-}
-.card-content {
-  width: auto;
-}
-</style>
-              <!-- <div class="isotope row" data-isotope-layout="fitRows" data-isotope-group="gallery">
-                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1"><a class="img-thumbnail-variant-3" href="images/services-1-original.jpg" data-lightgallery="item">
-                    <figure><img src="images/services-1-418x315.jpg" alt="" width="418" height="315"/>
-                    </figure>
-                    <div class="caption"><span class="icon novi-icon hover-top-element linear-icon-picture"></span>
-                      <ul class="list-inline-tag hover-top-element">
-                        <li>Advantages</li>
-                      </ul>
-                      <p class="heading-5 hover-top-element">Professional Staff</p>
-                      <div class="divider"></div>
-                      <p class="small hover-bottom-element">Creating stunning exteriors.</p><span class="icon novi-icon arrow-right linear-icon-plus"></span>
-                    </div></a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 1"><a class="img-thumbnail-variant-3" href="images/services-2-original.jpg" data-lightgallery="item">
-                    <figure><img src="images/services-2-418x315.jpg" alt="" width="418" height="315"/>
-                    </figure>
-                    <div class="caption"><span class="icon novi-icon hover-top-element linear-icon-picture"></span>
-                      <ul class="list-inline-tag hover-top-element">
-                        <li>Advantages</li>
-                      </ul>
-                      <p class="heading-5 hover-top-element">High-Quality Materials</p>
-                      <div class="divider"></div>
-                      <p class="small hover-bottom-element">Creating stunning exteriors.</p><span class="icon novi-icon arrow-right linear-icon-plus"></span>
-                    </div></a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2"><a class="img-thumbnail-variant-3" href="images/services-3-original.jpg" data-lightgallery="item">
-                    <figure><img src="images/services-3-418x315.jpg" alt="" width="418" height="315"/>
-                    </figure>
-                    <div class="caption"><span class="icon novi-icon hover-top-element linear-icon-picture"></span>
-                      <ul class="list-inline-tag hover-top-element">
-                        <li>Services</li>
-                      </ul>
-                      <p class="heading-5 hover-top-element">Exterior Design</p>
-                      <div class="divider"></div>
-                      <p class="small hover-bottom-element">Creating stunning exteriors.</p><span class="icon novi-icon arrow-right linear-icon-plus"></span>
-                    </div></a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2"><a class="img-thumbnail-variant-3" href="images/services-4-original.jpg" data-lightgallery="item">
-                    <figure><img src="images/services-4-418x315.jpg" alt="" width="418" height="315"/>
-                    </figure>
-                    <div class="caption"><span class="icon novi-icon hover-top-element linear-icon-picture"></span>
-                      <ul class="list-inline-tag hover-top-element">
-                        <li>Services</li>
-                      </ul>
-                      <p class="heading-5 hover-top-element">Project Planning</p>
-                      <div class="divider"></div>
-                      <p class="small hover-bottom-element">Creating stunning exteriors.</p><span class="icon novi-icon arrow-right linear-icon-plus"></span>
-                    </div></a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2"><a class="img-thumbnail-variant-3" href="images/services-5-original.jpg" data-lightgallery="item">
-                    <figure><img src="images/services-5-418x315.jpg" alt="" width="418" height="315"/>
-                    </figure>
-                    <div class="caption"><span class="icon novi-icon hover-top-element linear-icon-picture"></span>
-                      <ul class="list-inline-tag hover-top-element">
-                        <li>Services</li>
-                      </ul>
-                      <p class="heading-5 hover-top-element">Exterior Renovation</p>
-                      <div class="divider"></div>
-                      <p class="small hover-bottom-element">Creating stunning exteriors.</p><span class="icon novi-icon arrow-right linear-icon-plus"></span>
-                    </div></a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4 isotope-item" data-filter="Category 2"><a class="img-thumbnail-variant-3" href="images/services-6-original.jpg" data-lightgallery="item">
-                    <figure><img src="images/services-6-418x315.jpg" alt="" width="418" height="315"/>
-                    </figure>
-                    <div class="caption"><span class="icon novi-icon hover-top-element linear-icon-picture"></span>
-                      <ul class="list-inline-tag hover-top-element">
-                        <li>Services</li>
-                      </ul>
-                      <p class="heading-5 hover-top-element">Landscape Design</p>
-                      <div class="divider"></div>
-                      <p class="small hover-bottom-element">Creating stunning exteriors.</p><span class="icon novi-icon arrow-right linear-icon-plus"></span>
-                    </div></a>
-                </div>
-              </div> -->
-            </div>
-            <div class="col-sm-12">
-              <!-- Classic Pagination-->
-              <nav>
-                <ul class="pagination-classic">
-                  <li class="active"><span>1</span></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a class="icon novi-icon linear-icon-arrow-right" href="#"></a></li>
-                </ul>
-              </nav>
-            </div>
           </div>
         </div>
       </section>

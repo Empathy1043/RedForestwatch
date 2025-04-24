@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>红林守望</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/logo(1).png" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&amp;family=Volkhov:wght@400;700&amp;display=swap">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/生态科普.css"></link>
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+
+  </head>
+<body>
+<!-- 在导航栏下方添加视频容器 -->
+<section class="video-section">
+  <!-- 动态信息层容器 -->
+  <div class="video-overlay">
+    <!-- 生态数据浮层 -->
+    <div class="eco-data-layer" data-aos="fade-left">
+      <div class="data-card">
+        <i class="ph ph-tree"></i>
+        <span class="data-label">实时生态指数</span>
+        <div class="data-value">86.5</div>
+      </div>
+    </div>
+    
+    <!-- 交互式时间轴 -->
+    <div class="timeline-annotations">
+      <div class="annotation" data-time="00:08">
+        <div class="annotation-marker"></div>
+        <div class="annotation-text">潮间带生态系统激活</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 增强型视频容器 -->
+  <div class="video-container" data-aos="zoom-in">
+    <video class="eco-video" 
+           poster="images/001.jpeg" 
+           autoplay muted playsinline controls>
+      <source src="audio/WeChat_20250424213535.mp4" type="video/mp4">
+      <track label="中文字幕" kind="subtitles" srclang="zh" src="media/subtitles.vtt">
+    </video>
+    <div class="video-overlay">
+      <button class="btn-sound" aria-label="开启声音">
+        <i class="ph ph-speaker-simple-slash"></i>
+      </button>
+    </div>
+</section>
+<!-- 在文章卡片容器外新增生态主题装饰层 -->
+<div class="eco-container">
+  <div class="leaf-pattern-overlay"></div>
+  
+  <!-- 导航栏增加生态图标 -->
+  <nav class="filter-nav">
+    <ul class="nav justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          <i class="icon-leaf"></i> 全部
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          <i class="icon-leaf"></i> 生态价值
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          <i class="icon-leaf"></i> 保护服务
+        </a>
+      </li>
+      <!-- 其他导航项同理添加图标 -->
+    </ul>
+  </nav>
+
+  <!-- 卡片容器增加多维度信息展示 -->
+  <div class="row eco-articles gy-5">
+    <article class="col-lg-6 eco-card">
+      <div class="card-hover">
+        <!-- 新增图片信息层 -->
+        <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" target="_blank" class="card-media">
+          <img src="images/gzh1.png" alt="航拍金牛岛红树林景观" class="eco-image">
+        </a>
+        
+        <!-- 卡片正文增加多信息模块 -->
+        <div class="card-body">
+          <span class="badge bg-soft-green", style="color: #c8e6c9;">湿地生态</span>
+                  <h4 class="card-title">金牛岛红林翠海：解码生态密码</h4>
+                  <blockquote class="card-quote">红树林间鹭鸟飞，船游绿海不思归</blockquote>
+                  <a href="https://mp.weixin.qq.com/s/g0KzuZ9nDtDCuirLggpBhQ" class="btn btn-eco">
+                    阅读完整文章
+                    <i class="icon-arrow-right"></i>
+                  </a>
+          <div class="article-meta">  <!-- 新增元信息 -->
+            <span class="author">👩🔬 红林守望</span>
+            <span class="date">🕒 2025年04月07日09:26</span>
+          </div>
+          <h4 class="card-title">...</h4>
+          <!-- 新增数据可视化 -->
+          <div class="eco-stats">
+            <div class="stat-item">
+              <div class="stat-bar" style="width: 63%"></div>
+              <span>生态完整度 63%</span>
+            </div>
+          </div>
+          <blockquote class="card-quote">...</blockquote>
+          <!-- 新增互动元素 -->
+          <div class="card-actions">
+            <button class="btn btn-icon">
+              <i class="icon-share"></i> 234📖
+            </button>
+            <button class="btn btn-icon">
+              <i class="icon-heart"></i> 1.8k👍️
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="col-lg-6 eco-card">
+      <div class="card-hover">
+        <!-- 新增图片信息层 -->
+        <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" target="_blank" class="card-media">
+          <img src="images/gzh2.png" alt="航拍金牛岛红树林景观" class="eco-image">
+        </a>
+        
+        <!-- 卡片正文增加多信息模块 -->
+        <div class="card-body">
+          <span class="badge bg-soft-green", style="color: #c8e6c9;">植物百科</span>
+                  <h4 class="card-title">红树林不红？名称背后的秘密</h4>
+                  <blockquote class="card-quote">揭秘植物界最"名不副实"的种群</blockquote>
+                  <a href="https://mp.weixin.qq.com/s/JZpH1WlReajyDQAFOYe4UA" class="btn btn-eco">
+                    阅读完整文章
+                    <i class="icon-arrow-right"></i>
+                  </a>
+          <div class="article-meta">  <!-- 新增元信息 -->
+            <span class="author">👩🔬 红林守望</span>
+            <span class="date">🕒 2025年04月20日11:40</span>
+          </div>
+          <h4 class="card-title">...</h4>
+          <!-- 新增数据可视化 -->
+          <div class="eco-stats">
+            <div class="stat-item">
+              <div class="stat-bar" style="width: 85%"></div>
+              <span>生态完整度 85%</span>
+            </div>
+          </div>
+          <blockquote class="card-quote">...</blockquote>
+          <!-- 新增互动元素 -->
+          <div class="card-actions">
+            <button class="btn btn-icon">
+              <i class="icon-share"></i> 168📖
+            </button>
+            <button class="btn btn-icon">
+              <i class="icon-heart"></i> 1.2k👍️
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+
+</body>

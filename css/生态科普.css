@@ -1,0 +1,243 @@
+/* 视频模块样式 */
+.video-section {
+  margin: 40px 0;
+  padding: 0 5%;
+}
+/* 动态信息层 */
+.eco-data-layer {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 3;
+  backdrop-filter: blur(5px);
+}
+
+.data-card {
+  background: rgba(46, 204, 113, 0.15);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+/* 交互热区动画 */
+.hotspot-pulse {
+  width: 24px;
+  height: 24px;
+  background: rgba(255,255,255,0.2);
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+}
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 0.7; }
+  50% { transform: scale(1.2); opacity: 0.3; }
+  100% { transform: scale(0.8); opacity: 0.7; }
+}
+
+/* 生态主题滤镜 */
+.eco-video {
+  filter: 
+    hue-rotate(-5deg) 
+    contrast(105%) 
+    saturate(110%);
+}
+.video-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(46, 204, 113, 0.15);
+  background: linear-gradient(145deg, #e3f5e1 0%, #f8fff9 100%);
+}
+
+.eco-video {
+  width: 70%;
+  height: 560px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+}
+/* 卡片内容容器 */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+}
+.btn-sound {
+  background: rgba(255,255,255,0.9);
+  padding: 8px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .eco-video {
+    height: 300px;
+  }
+  .video-container {
+    border-radius: 8px;
+  }
+}
+
+/* 生态容器增强 */
+.eco-container {
+  position: relative;
+  background: linear-gradient(175deg, #f8fff9 0%, #e3f5e1 100%);
+  padding: 2rem;
+  border-radius: 16px;
+}
+
+/* 叶片装饰层 */
+.leaf-pattern-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg...>'); 
+  /* 此处可替换为叶片SVG图案 */
+  opacity: 0.15;
+}
+
+/* 图片信息层 */
+.media-meta {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+.photo-count, .video-badge {
+  background: rgba(255,255,255,0.9);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.85em;
+}
+
+/* 元信息样式 */
+.article-meta {
+  display: flex;
+  gap: 15px;
+  color: #7a8c7c;
+  margin-bottom: 12px;
+}
+.author:before, .date:before {
+  margin-right: 5px;
+}
+
+/* 生态数据可视化 */
+.eco-stats {
+  width: 100%;
+  background: #f8fbf8;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 1rem 0;
+}
+.stat-item {
+  height: 24px;
+  position: relative;
+}
+.stat-bar {
+  height: 100%;
+  background: #c8e6c9;
+  border-radius: 4px;
+  transition: width 0.8s ease;
+}
+
+/* 卡片互动按钮 */
+.card-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+}
+.btn-icon {
+  background: rgba(46, 204, 113, 0.1);
+  border-radius: 50px;
+  padding: 6px 12px;
+  color: var(--eco-green);
+}
+/* 生态主题色 */
+:root {
+  --eco-green: #2ecc71;
+  --eco-dark: #27ae60;
+}
+
+/* 卡片交互优化 */
+.eco-card {
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(46, 204, 113, 0.1);
+}
+
+/* 图片自适应 */
+.eco-image {
+  height: 320px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  margin: auto;
+}
+/* 图片容器定位优化 */
+.card-media {
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+/* 生态按钮 */
+.btn-eco {
+  background: var(--eco-green);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.btn-eco:hover {
+  background: var(--eco-dark);
+}
+
+/* 引用文字样式 */
+.card-quote {
+  color: #7f8c8d;
+  font-style: italic;
+  border-left: 3px solid var(--eco-green);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+  .eco-image { height: 280px; }
+  .card-title { font-size: 1.4rem; }
+}
+/* 卡片悬停动效 */
+.article-card {
+  transition: transform 0.3s ease;
+}
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 阅读按钮样式 */
+.read-btn {
+  background: #27ae60;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: white;
+  display: inline-block;
+}
+.read-btn:hover {
+  background: #219a52;
+}
+.card-content {
+  width: auto;
+}
