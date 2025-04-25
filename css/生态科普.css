@@ -78,13 +78,68 @@
   transition: transform 0.3s ease;
 }
 
+/* 新增移动端适配样式 */
 @media (max-width: 768px) {
-  .eco-video {
-    height: 300px;
-  }
   .video-container {
-    border-radius: 8px;
+    max-width: 100vw;
+    margin: 0;
+    border-radius: 0;
+    padding: 0 8px;
   }
+
+  .eco-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* 根据视频实际比例修改 */
+    object-fit: contain;
+  }
+
+  .video-overlay {
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .btn-sound {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  /* 优化触控区域 */
+  .btn-sound {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+/* 补充基础样式 */
+.video-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.eco-video {
+  display: block;
+  width: 100%;
+  background: #000;
+}
+
+.video-overlay {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
+.btn-sound {
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
 /* 生态容器增强 */
@@ -97,6 +152,8 @@
 
 /* 叶片装饰层 */
 .leaf-pattern-overlay {
+  pointer-events: none; /* 关键修复属性：允许穿透点击 */
+  z-index: 1; /* 确保在内容层下方 */
   position: absolute;
   width: 100%;
   height: 100%;
@@ -172,6 +229,8 @@
 /* 卡片交互优化 */
 .eco-card {
   transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  z-index: 2; /* 提升内容层级 */
 }
 .card-hover:hover {
   transform: translateY(-8px);
@@ -180,18 +239,76 @@
 
 /* 图片自适应 */
 .eco-image {
+  width: 100%;
   height: 320px;
   object-fit: cover;
-  border-radius: 8px 8px 0 0;
-  margin: auto;
+  filter: brightness(0.98);
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(18, 94, 72, 0.15) 100%);
+  }
 }
 /* 图片容器定位优化 */
 .card-media {
-  display: flex;
-  justify-content: center;
-  padding: 0 1rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(18, 94, 72, 0.15);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.eco-stats {
+  margin: 1.5rem 0;
 }
 
+.stat-item {
+  position: relative;
+  height: 28px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 14px;
+  box-shadow: inset 0 2px 4px rgba(18, 94, 72, 0.1);
+}
+
+.stat-bar {
+  height: 100%;
+  border-radius: 14px;
+  background: linear-gradient(90deg, #C8E6C9 0%, #81C784 100%);
+  width: 0; /* 初始宽度设为0 */
+  transition: 
+    width 1.8s cubic-bezier(0.22, 0.61, 0.36, 1),
+    background-color 0.6s;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.3);
+  opacity: 0;
+  animation: ripple 0.6s;
+}
+
+@keyframes ripple {
+  0% { opacity: 1; transform: scale(0) }
+  100% { opacity: 0; transform: scale(1) }
+}
+
+.stat-item span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #2E7D32;
+  font-weight: 500;
+  mix-blend-mode: multiply;
+}
 /* 生态按钮 */
 .btn-eco {
   background: var(--eco-green);

@@ -19,6 +19,71 @@
 
   </head>
 <body>
+  <style>
+    /* 新增移动端适配样式 */
+    @media (max-width: 768px) {
+      .video-container {
+        max-width: 100vw;
+        margin: 0;
+        border-radius: 0;
+        padding: 0 8px;
+      }
+    
+      .eco-video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9; /* 根据视频实际比例修改 */
+        object-fit: contain;
+      }
+    
+      .video-overlay {
+        bottom: 15px;
+        right: 15px;
+      }
+    
+      .btn-sound {
+        padding: 10px;
+        font-size: 18px;
+      }
+    
+      /* 优化触控区域 */
+      .btn-sound {
+        min-width: 44px;
+        min-height: 44px;
+      }
+    }
+    
+    /* 补充基础样式 */
+    .video-container {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    
+    .eco-video {
+      display: block;
+      width: 100%;
+      background: #000;
+    }
+    
+    .video-overlay {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2;
+    }
+    
+    .btn-sound {
+      background: rgba(255,255,255,0.9);
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    </style>
 <!-- 在导航栏下方添加视频容器 -->
 <section class="video-section">
   <!-- 动态信息层容器 -->
@@ -105,20 +170,79 @@
           </div>
           <h4 class="card-title">...</h4>
           <!-- 新增数据可视化 -->
-          <div class="eco-stats">
+          <!-- <div class="eco-stats">
             <div class="stat-item">
               <div class="stat-bar" style="width: 63%"></div>
               <span>生态完整度 63%</span>
             </div>
-          </div>
+          </div> -->
+            
+            <div class="eco-stats">
+              <div class="stat-item">
+                <!-- 初始宽度设为0 -->
+                <div class="stat-bar" style="width: 0%"></div>
+                <span>生态完整度 <em class="percent">0</em>%</span>
+              </div>
+            </div>
+            
+            <script>
+            let hasAnimated = false;
+            const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                if (entry.isIntersecting && !hasAnimated) {
+                  const bar = entry.target.querySelector('.stat-bar');
+                  const percentElem = entry.target.querySelector('.percent');
+                  
+                  // 强制重绘确保动画重置
+                  bar.style.transition = 'none';
+                  bar.style.width = '0%';
+                  percentElem.textContent = '0';
+                  
+                  // 触发重绘
+                  void bar.offsetWidth;
+                  
+                  // 恢复过渡效果
+                  bar.style.transition = '';
+                  
+                  // 启动宽度动画
+                  bar.style.width = '63%';
+                  
+                  // 数字递增动画
+                  let start = null;
+                  const duration = 1800;
+                  const animate = (timestamp) => {
+                    if (!start) start = timestamp;
+                    const progress = timestamp - start;
+                    const current = Math.min(63, (progress / duration) * 63);
+                    percentElem.textContent = Math.floor(current);
+                    if (progress < duration) {
+                      requestAnimationFrame(animate);
+                    }
+                  };
+                  requestAnimationFrame(animate);
+                  
+                  hasAnimated = true;
+                  observer.unobserve(entry.target);
+                }
+              });
+            }, { 
+              threshold: 0.5, // 当50%进入视口时触发
+              rootMargin: '0px 0px -50px 0px' // 底部提前50px触发
+            });
+            
+            // 监听每个生态统计容器
+            document.querySelectorAll('.eco-stats').forEach(el => {
+              observer.observe(el);
+            });
+            </script>
           <blockquote class="card-quote">...</blockquote>
           <!-- 新增互动元素 -->
           <div class="card-actions">
             <button class="btn btn-icon">
-              <i class="icon-share"></i> 234📖
+              <i class="icon-share"></i> 234👍️
             </button>
             <button class="btn btn-icon">
-              <i class="icon-heart"></i> 1.8k👍️
+              <i class="icon-heart"></i> 1.8k📖
             </button>
           </div>
         </div>
@@ -152,6 +276,7 @@
               <span>生态完整度 85%</span>
             </div>
           </div>
+          
           <blockquote class="card-quote">...</blockquote>
           <!-- 新增互动元素 -->
           <div class="card-actions">
